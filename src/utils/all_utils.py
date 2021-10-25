@@ -11,3 +11,6 @@ def create_directory(dirs: list):
         os.makedirs(dir_path,exist_ok=True)
         print(f"Directory is created at {dir_path}")
     
+def save_local_df(data,data_path,index_status=False):
+    data.to_csv(data_path,index=index_status)
+    print(f"Data is saved at {data_path}")
